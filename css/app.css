@@ -1,0 +1,269 @@
+@font-face {
+    font-family: "NBG";
+    src: url("../webfonts//NanumBarunGothic.woff2");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: NBG;
+    box-sizing: border-box;
+    color: inherit;
+}
+
+i {
+    cursor: pointer;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+input[type='range'] {
+    height: 6px;
+    overflow: hidden;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #333;
+}
+
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 0;
+    height: 0;
+    box-shadow: -100vw 0 0 100vw #3f3fff;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.justify-content-start {
+    justify-content: flex-start;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-end {
+    justify-content: flex-end;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.align-items-start {
+    align-items: flex-start;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.align-items-end {
+    align-items: flex-end;
+}
+
+.position-relative {
+    position: relative;
+}
+.position-absolute {
+    position: absolute;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #262626;
+    color: white;
+}
+
+#music_info {
+    left: 18%;
+    top: 52%;
+    transform: translateY(-50%);
+    width: 575px;
+}
+
+#music_info .music_img {
+    padding-bottom: 80px;
+}
+
+#music_info .music_img.active img {
+    animation: ani 1s infinite forwards;
+}
+
+@keyframes ani {
+    0% { 	transform: rotate( 00deg ); }
+    15% { 	transform: rotate( 90deg ); }
+    30% { 	transform: rotate( 180deg ); }
+    45% { 	transform: rotate( 360deg ); }
+    60% { 	transform: rotate( 450deg ); }
+    75% { 	transform: rotate( 540deg ); }
+    90% { 	transform: rotate( 630deg ); }
+    100% { 	transform: rotate( 720deg ); }
+}
+
+#music_info .music_img img {
+    width: 400px;
+    height: 400px;
+}
+
+#music_info .music_name {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+#music_info .progress {
+    margin: 25px 0px 15px 0px;
+}
+
+#music_info .time span {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+#music_info .time .current-time {
+    color: #a0a0a0;
+}
+
+#music_info .time .total-time {
+    color: #646464;
+}
+
+#music_info .player_control {
+    margin: 40px 0px 50px 0px;
+}
+
+#music_info .player_control i {
+    transition: color .3s;
+    margin: 0px 28px;
+}
+
+#music_info .player_control .retweet,
+#music_info .player_control .stop,
+#music_info .player_control .backward:hover,
+#music_info .player_control .forward:hover,
+#music_info .player_control .play:hover,
+#music_info .player_control .pause:hover {
+    color: #646464;
+}
+
+#music_info .player_control .retweet:hover,
+#music_info .player_control .stop:hover {
+    color: #333;
+}
+
+#music_info .player_control .retweet,
+#music_info .player_control .backward,
+#music_info .player_control .forward,
+#music_info .player_control .stop,
+#music_info .volumn i {
+    font-size: 23px;
+}
+
+#music_info .player_control .play,
+#music_info .player_control .pause {
+    font-size: 30px;
+}
+
+#music_info .player_control .one::before {
+    content: '1';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    text-align: center;
+    color: black;
+    font-size: 8px;
+    border-radius: 50%;
+    left: 55px;
+    bottom: 0;
+    background-color: white;
+}
+
+#music_info .volumn {
+    margin-top: 20px;
+}
+
+#music_info .volumn i {
+    color: #646464;
+}
+
+#music_info .volumn.active i {
+    color: #fff;
+}
+
+#music_info .volumn input {
+    width: 68px;
+    height: 4px;
+    margin-left: 8px;
+}
+
+#music_info .volumn input[type='range']::-webkit-slider-thumb {
+    box-shadow: -100vw 0 0 100vw #fff;
+}
+
+#playList {
+    right: 17.5%;
+    top: 39%;
+    transform: translateY(-50%);
+    width: 575px;
+}
+
+#playList .playList_header li {
+    width: 33.33%;
+    height: 56px;
+    font-size: 16px;
+    border-bottom: 2px solid #464646;
+    cursor: pointer;
+}
+
+#playList .playList_header li.active {
+    border-bottom: 2px solid white;
+}
+
+#playList .playList_header li i {
+    margin-right: 10px;
+}
+
+#playList .item-list {
+    margin-top: 30px;
+    height: 500px;
+    overflow-y: auto;
+}
+
+#playList .item-list .item {
+    font-size: 15px;
+    margin-top: 20px;
+    cursor: pointer;
+    user-select: none;
+}
+
+#playList .item-list .item img {
+    width: 45px;
+    height: 45px;
+}
+
+#playList .item-list .item span {
+    margin-left: 20px;
+}
+
+#playList .item-list .item.active span {
+    color: #3f3fff;
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>뮤직 플레이어</title>
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/app.css">
+    <script src="./js/Player.js"></script>
+    <script src="./js/PlayList.js"></script>
+    <script src="./js/app.js"></script>
+</head>
+<body>
+    
+    <div class="container position-relative">
+
+        <div class="d-flex flex-column position-absolute" id="music_info">
+            <audio src=""></audio>
+
+            <div class="music_img d-flex justify-content-center">
+                <img src="images/record.png" alt="record" title="record">
+            </div>
+
+            <div class="music_name">재생할 음악이 없습니다.</div>
+
+            <input type="range" value="0" min="0" max="100" class="progress">
+
+            <div class="time d-flex justify-content-between align-items-center">
+                <span class="current-time">00:00:00</span>
+                <span class="total-time">00:00:00</span>
+            </div>
+
+            <div class="player_control d-flex justify-content-center align-items-center">
+                <i class="fa fa-retweet retweet no" data-idx="0"></i>
+                <span class="one position-relative retweet d-none" data-idx="1">
+                    <i class="fa fa-retweet" style="color: #fff;"></i>
+                </span>
+                <i class="fa fa-retweet retweet list d-none" style="color: #fff;" data-idx="2"></i>
+                <i class="fa fa-step-backward backward"></i>
+                <i class="fa fa-play play"></i>
+                <i class="fa fa-pause pause d-none"></i>
+                <i class="fa fa-step-forward forward"></i>
+                <i class="fa fa-stop stop"></i>
+            </div>
+
+            <div class="volumn d-flex align-items-center">
+                <i class="fa fa-volume-up"></i>
+                <!-- mute -->
+                <input type="range" value="0" min="0" max="100" class="volumeProgress">
+            </div>
+
+        </div> <!-- End of teg music_info -->
+
+        <div id="playList" class="position-absolute">
+
+            <ul class="playList_header d-flex">
+                <li class="d-flex justify-content-center align-items-center active">
+                    <i class="fas fa-indent"></i>
+                    재생목록
+                </li>
+                <li class="d-flex justify-content-center align-items-center">
+                    <i class="fas fa-music"></i>
+                    유사곡
+                </li>
+                <li class="d-flex justify-content-center align-items-center" id="openDialog">
+                    <i class="fas fa-plus add"></i>
+                    <input type="file" id="audioFile" multiple hidden>
+                    곡추가
+                </li>
+            </ul>
+
+            <ul class="item-list"></ul>
+        </div>
+
+        <!-- <div class="main-row">
+            <div id="player">
+                <div class="info">
+                    <div class="audio-info">
+                        <div class="file-name">재생할 음악이 없습니다.</div>
+                    </div>
+                    <div class="time-info">
+                        <span class="current-time">00:00:00</span>
+                        <span class="total-time">00:00:00</span>
+                    </div>
+                </div>
+                <div class="progress">
+                    <div class="bar"></div>
+                </div>
+                <audio src=""></audio>
+                <div class="control">
+                    <div class="control-btn">
+                        <button class="play btn"><i class="fa fa-play"></i></button>
+                        <button class="pause btn d-none"><i class="fa fa-pause"></i></button>
+                        <button class="stop btn"><i class="fa fa-stop"></i></button>
+                    </div>
+                    <div class="mode-btn">
+                        <input type="radio" name="repeat" class="repeat-btn" value="0" checked>반복없음
+                        <input type="radio" name="repeat" class="repeat-btn" value="1">한곡반복
+                        <input type="radio" name="repeat" class="repeat-btn" value="2">리스트반복
+                    </div>
+                </div>
+            </div>
+
+            <div id="playList">
+                <ul class="item-list">
+                    <li class="item active">sample4.mp3</li>
+                    <li class="item">sample4.mp3</li>
+                    <li class="item">sample4.mp3</li>
+                    <li class="item">sample4.mp3</li>
+                </ul>
+                <div class="button-row">
+                    <button id="openDialog" class="btn add"><i class="fas fa-plus"></i></button>
+                    <input type="file" id="audioFile" multiple hidden>
+                </div>
+            </div>
+        </div> -->
+
+    </div> <!-- end of container -->
+
+</body>
+</html>
